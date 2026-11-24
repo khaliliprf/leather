@@ -1,0 +1,28 @@
+\documentclass[12pt,a4paper]{article}
+\input{../shared/preamble.tex}
+
+\newcommand{\LeatherPhoto}[4]{%
+  \begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=\linewidth,height=#2,keepaspectratio]{#1}%
+    \caption{#3}\label{#4}
+  \end{figure}%
+}
+
+\newcommand{\LeatherPhotoPanel}[3]{%
+  \begin{minipage}[t]{0.46\linewidth}
+    \centering
+    \includegraphics[width=\linewidth,height=52mm,keepaspectratio]{#1}%
+    \caption{#2}\label{#3}
+  \end{minipage}%
+}
+
+\begin{document}
+\BookletCover{شناخت و انتخاب چرم برای چرم‌دوزی}{راهنمای تصویریِ مواد و انتخاب کارگاهی}
+\tableofcontents
+\clearpage
+\input{materials.tex}
+\input{workshop.tex}
+\clearpage
+\input{sources.tex}
+\end{document}

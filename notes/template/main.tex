@@ -1,0 +1,45 @@
+\documentclass[12pt,a4paper]{article}
+\input{../shared/preamble.tex}
+
+\begin{document}
+\BookletCover{نمونۀ قالب جزوه}{چیدمان متن، جدول، شکل و منابع}
+\tableofcontents
+\clearpage
+
+\section{ثبت اندازه‌های یک نمونه}
+عنوان هر ستون مشخص می‌کند که عددهای آن ستون چه کمیتی را نشان می‌دهند و با چه واحدی ثبت شده‌اند. در جدول~\ref{tab:measurements}، هر اندازه به یکی از قسمت‌های مشخص‌شده در شکل~\ref{fig:parts} تعلق دارد.
+
+\subsection{معرفی اصطلاح فنی}
+اصطلاح \lr{Full-grain leather} به چرمی اشاره دارد که لایۀ طبیعی رویه را به‌طور کامل حفظ کرده است \cite{lwg}.
+
+\begin{table}[htbp]
+  \centering
+  \caption{اندازه‌های فرضی دو قسمت از یک قطعه}
+  \label{tab:measurements}
+  \begin{tabular}{rcc}
+    \toprule
+    قسمت & طول (میلی‌متر) & عرض (میلی‌متر) \\
+    \midrule
+    الف & ۴۵ & ۲۰ \\
+    ب   & ۳۰ & ۲۰ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[htbp]
+  \centering
+  \setlength{\fboxsep}{0pt}
+  \setlength{\fboxrule}{0.6pt}
+  \fbox{\parbox[c][20mm][c]{45mm}{\centering الف}}%
+  \hspace{3mm}%
+  \fbox{\parbox[c][20mm][c]{30mm}{\centering ب}}
+  \caption{طرح شماتیک قسمت‌های اندازه‌گیری‌شده}
+  \label{fig:parts}
+\end{figure}
+
+\begin{thebibliography}{9}
+  \bibitem{lwg}
+  \lr{Leather Working Group. \emph{\href{https://www.leatherworkinggroup.com/fileadmin/uploads/lwg/Knowledge/LWG_List_of_Definitions_v1.1.pdf}{List of Definitions}}. Version 1.1, January 2024.}\newline
+  مدخل «\mbox{\lr{Full grain}}».
+\end{thebibliography}
+\end{document}

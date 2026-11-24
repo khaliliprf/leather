@@ -1,0 +1,60 @@
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[a4paper,left=26mm,right=26mm,top=29mm,bottom=27mm,headheight=25pt]{geometry}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage{xepersian}
+
+\settextfont[
+  Path=../assets/,
+  Scale=1.12,
+  BoldFont=B-NAZANIN.TTF
+]{B-NAZANIN.TTF}
+
+\graphicspath{{assets/}}
+\definecolor{BookletAccent}{HTML}{573626}
+\definecolor{BookletMuted}{HTML}{59514D}
+\definecolor{BookletRule}{HTML}{C0AEA3}
+
+\linespread{1.22}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em plus 0.15em}
+\setlength{\abovecaptionskip}{9pt}
+\setlength{\belowcaptionskip}{6pt}
+\renewcommand{\arraystretch}{1.22}
+\raggedbottom
+
+\makeatletter
+\renewcommand{\section}{%
+  \@startsection{section}{1}{0pt}%
+    {-3.0ex plus -0.8ex minus -0.2ex}{1.1ex plus 0.2ex}%
+    {\normalfont\Large\color{black}}}
+\renewcommand{\subsection}{%
+  \@startsection{subsection}{2}{0pt}%
+    {-2.5ex plus -0.6ex minus -0.2ex}{0.8ex plus 0.2ex}%
+    {\normalfont\large\color{black}}}
+\renewcommand*{\l@section}[2]{\@dottedtocline{1}{0em}{1.8em}{#1}{#2}}
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\small جزوه‌های فنی چرم‌دوزی}
+\fancyfoot[L]{\small\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\newcommand{\BookletCover}[2]{%
+  \hypersetup{pdftitle={#1}}%
+  \begin{titlepage}
+    \vspace*{22mm}%
+    {\color{BookletAccent}\large جزوه‌های فنی چرم‌دوزی\par}
+    \vspace{5mm}%
+    {\color{BookletRule}\rule{\linewidth}{0.8pt}\par}
+    \vspace{25mm}%
+    {\color{black}\fontsize{30}{37}\selectfont #1\par}
+    \vspace{5mm}%
+    {\color{BookletMuted}\Large #2\par}
+  \end{titlepage}%
+}

@@ -1,0 +1,51 @@
+% All illustrations are original schematics. Their dimensions are illustrative.
+\newcommand{\PatternLinesDiagram}{%
+  \begin{latin}
+  \setlength{\unitlength}{1mm}%
+  \begin{picture}(110,43)(0,0)
+    \put(9,6){\framebox(92,30){}}
+    \put(10,38){\makebox(0,0)[l]{A}}
+    \multiput(14,11)(4,0){21}{\line(1,0){2}}
+    \put(15,14){\makebox(0,0)[l]{B}}
+    \multiput(55,13)(0,3){7}{\line(0,1){1}}
+    \put(58,25){\makebox(0,0)[l]{C}}
+    \put(90,26){\circle{5}}
+    \put(94,26){\makebox(0,0)[l]{D}}
+  \end{picture}
+  \end{latin}%
+}
+
+\newcommand{\SkiveDiagram}{%
+  \begin{latin}
+  \setlength{\unitlength}{1mm}%
+  \begin{picture}(115,34)(0,0)
+    \put(13,22){\line(1,0){85}}
+    \put(13,9){\line(1,0){54}}
+    \qbezier(67,9)(83,12)(98,17)
+    \put(13,9){\line(0,1){13}}
+    \put(98,17){\line(0,1){5}}
+    \multiput(67,9)(3,0){10}{\line(1,0){1}}
+    \put(38,27){\makebox(0,0){A}}
+    \put(81,4){\makebox(0,0){B}}
+    \put(105,19){\makebox(0,0){C}}
+  \end{picture}
+  \end{latin}%
+}
+
+\newcommand{\PressStackDiagram}{%
+  \begin{latin}
+  \setlength{\unitlength}{1mm}%
+  \begin{picture}(110,46)(0,0)
+    \put(10,36){\framebox(77,5){}}
+    \put(92,38){\makebox(0,0)[l]{A}}
+    \put(23,23){\line(0,1){10}}
+    \put(74,23){\line(0,1){10}}
+    \put(23,33){\line(1,0){51}}
+    \put(92,29){\makebox(0,0)[l]{B}}
+    \put(10,17){\framebox(77,5){}}
+    \put(92,19){\makebox(0,0)[l]{C}}
+    \put(10,7){\framebox(77,9){}}
+    \put(92,11){\makebox(0,0)[l]{D}}
+  \end{picture}
+  \end{latin}%
+}

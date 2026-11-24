@@ -1,0 +1,74 @@
+% All coordinates are in millimeters. Use LTR picture coordinates for printing.
+\newcommand{\HorizontalGauge}{%
+  \put(0,0){\line(1,0){100}}%
+  \put(0,-1){\line(0,1){2}}%
+  \put(100,-1){\line(0,1){2}}%
+}
+
+\newcommand{\VerticalGauge}{%
+  \put(0,0){\line(0,1){100}}%
+  \put(-1,0){\line(1,0){2}}%
+  \put(-1,100){\line(1,0){2}}%
+}
+
+\newcommand{\RegistrationMark}{%
+  \put(-2,0){\line(1,0){4}}%
+  \put(0,-2){\line(0,1){4}}%
+}
+
+\newcommand{\CardPrintPattern}{%
+  \begin{latin}
+  \setlength{\unitlength}{1mm}%
+  \begin{picture}(146,173)(0,0)
+    \put(10,98){\framebox(100,68){}}
+    \put(118,132){\makebox(0,0){A}}
+    \multiput(16,102)(4,0){23}{\line(1,0){2}}
+    \multiput(14,102)(0,4){12}{\line(0,1){2}}
+    \multiput(106,102)(0,4){12}{\line(0,1){2}}
+    \put(10,28){\framebox(100,52){}}
+    \put(118,54){\makebox(0,0){B}}
+    \multiput(16,32)(4,0){23}{\line(1,0){2}}
+    \multiput(14,32)(0,4){12}{\line(0,1){2}}
+    \multiput(106,32)(0,4){12}{\line(0,1){2}}
+    \put(10,15){\HorizontalGauge}
+    \put(60,10){\makebox(0,0){H}}
+    \put(130,28){\VerticalGauge}
+    \put(135,78){\makebox(0,0)[l]{V}}
+  \end{picture}
+  \end{latin}%
+}
+
+\newcommand{\PanelTileMarks}[1]{%
+  \multiput(#1,-4)(0,3){50}{\line(0,1){1}}%
+  \put(#1,-6){\RegistrationMark}%
+  \put(#1,146){\RegistrationMark}%
+  \put(25,-12){\HorizontalGauge}%
+}
+
+\newcommand{\PanelLeftTile}{%
+  \begin{latin}
+  \setlength{\unitlength}{1mm}%
+  \begin{picture}(154,166)(-2,-15)
+    \put(0,15){\line(0,1){110}}
+    \qbezier(0,125)(0,140)(15,140)
+    \qbezier(0,15)(0,0)(15,0)
+    \put(15,0){\line(1,0){135}}
+    \put(15,140){\line(1,0){135}}
+    \PanelTileMarks{140}
+  \end{picture}
+  \end{latin}%
+}
+
+\newcommand{\PanelRightTile}{%
+  \begin{latin}
+  \setlength{\unitlength}{1mm}%
+  \begin{picture}(154,166)(-2,-15)
+    \put(0,0){\line(1,0){135}}
+    \put(0,140){\line(1,0){135}}
+    \qbezier(135,0)(150,0)(150,15)
+    \qbezier(135,140)(150,140)(150,125)
+    \put(150,15){\line(0,1){110}}
+    \PanelTileMarks{10}
+  \end{picture}
+  \end{latin}%
+}
